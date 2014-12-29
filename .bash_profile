@@ -3,6 +3,9 @@ export CLICOLOR=1
 # Make the colours brighter for better visibility
 export LSCOLORS=Exfxcxdxbxegedabagacad
 
+# Use vi-style key bindings (instead of emacs)
+set -o vi
+
 # Display git repository info in the prompt
 source ~/.dotfiles/git-completion.bash
 source ~/.dotfiles/git-prompt.sh
