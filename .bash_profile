@@ -1,3 +1,9 @@
+# Enable terminal colours
+export CLICOLOR=1
+# Make the colours brighter for better visibility
+export LSCOLORS=Exfxcxdxbxegedabagacad
+
+# Display git repository info in the prompt
 source ~/.dotfiles/git-completion.bash
 source ~/.dotfiles/git-prompt.sh
 
