@@ -1,0 +1,14 @@
+[alias]
+	co = checkout
+	hist = log --graph --oneline --decorate
+[core]
+	excludesfile = /Users/slee2/.gitignore_global
+	editor = vim
+[diff]
+	# don't show diffs for renamed files
+	renames = copies
+[push]
+	default = simple
+[user]
+	name = Steven Lee
+	email = steven.lee1@booking.com
