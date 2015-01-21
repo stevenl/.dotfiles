@@ -1,3 +1,8 @@
+# Source aliases
+if [ -f ~/.alias ]; then
+    . ~/.alias
+fi
+
 # Set proxies
 export http_proxy=https://webproxy.corp.booking.com:3128/
 export https_proxy=$http_proxy
