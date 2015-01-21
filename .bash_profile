@@ -3,13 +3,6 @@ if [ -f ~/.alias ]; then
     . ~/.alias
 fi
 
-# Set proxies
-export http_proxy=https://webproxy.corp.booking.com:3128/
-export https_proxy=$http_proxy
-export ftp_proxy=$http_proxy
-export rsync_proxy=$http_proxy
-export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
-
 # Enable terminal colours
 export CLICOLOR=1
 # Make the colours brighter for better visibility
@@ -27,6 +20,29 @@ GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWCOLORHINTS=1
+
+# Enable/disable proxies
+function proxy() {
+    local cmd=${1:-start}
+
+    case "$cmd" in
+        "on")
+            export http_proxy=https://webproxy.corp.booking.com:3128/
+            export https_proxy=$http_proxy
+            export ftp_proxy=$http_proxy
+            export rsync_proxy=$http_proxy
+            export no_proxy=localhost,127.0.0.1,localaddress,.localdomain.com
+            echo -e "Proxy environment variables ON"
+            ;;
+        "off")
+            unset http_proxy
+            unset https_proxy
+            unset ftp_proxy
+            unset rsync_proxy
+            echo -e "Proxy environment variables OFF"
+            ;;
+    esac
+}
 
 # Connect to vpn via OpenVPN/Tunnelblick
 # Usage: vpn start|stop
