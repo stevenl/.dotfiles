@@ -1,3 +1,10 @@
+# Set proxies
+export http_proxy=https://webproxy.corp.booking.com:3128/
+export https_proxy=$http_proxy
+export ftp_proxy=$http_proxy
+export rsync_proxy=$http_proxy
+export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
+
 # Enable terminal colours
 export CLICOLOR=1
 # Make the colours brighter for better visibility
@@ -34,3 +41,4 @@ function vpn() {
             ;;
     esac
 }
+
