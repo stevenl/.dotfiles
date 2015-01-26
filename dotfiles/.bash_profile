@@ -12,8 +12,8 @@ export LSCOLORS=Exfxcxdxbxegedabagacad
 set -o vi
 
 # Display git repository info in the prompt
-source ~/.dotfiles/git-completion.bash
-source ~/.dotfiles/git-prompt.sh
+source ~/.dotfiles/bin/git-completion.bash
+source ~/.dotfiles/bin/git-prompt.sh
 
 PROMPT_COMMAND='__git_ps1 "\u@\h:\w" " \\\$ "'
 GIT_PS1_SHOWDIRTYSTATE=1
