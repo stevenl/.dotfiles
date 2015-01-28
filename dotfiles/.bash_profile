@@ -11,6 +11,8 @@ export LSCOLORS=Exfxcxdxbxegedabagacad
 # Use vi-style key bindings (instead of emacs)
 set -o vi
 
+eval $(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)
+
 # Display git repository info in the prompt
 source ~/.dotfiles/bin/git-completion.bash
 source ~/.dotfiles/bin/git-prompt.sh
@@ -62,4 +64,3 @@ function vpn() {
             ;;
     esac
 }
-
