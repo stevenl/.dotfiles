@@ -1,2 +1,4 @@
+alias cls='clear'
+alias ll='ls -lhA'
 alias main='cd ~/development/main'
 alias aff='cd ~/development/affiliate_data'
