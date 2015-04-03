@@ -12,6 +12,7 @@ export LSCOLORS=Exfxcxdxbxegedabagacad
 set -o vi
 
 eval $(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)
+source ~/perl5/perlbrew/etc/bashrc
 
 # Display git repository info in the prompt
 source ~/.dotfiles/bin/git-completion.bash
