@@ -4,6 +4,7 @@
 	cm = commit -m
 	hist = log --graph --oneline --decorate
 	myhist = log --graph --oneline --decorate --author=steven.lee1
+	mylog  = log --graph --decorate --author=steven.lee1
 	unstage = reset HEAD --
 [core]
 	excludesfile = /Users/slee2/.gitignore_global
