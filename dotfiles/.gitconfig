@@ -6,6 +6,8 @@
 	myhist = log --graph --oneline --decorate --author=steven.lee1
 	mylog  = log --graph --decorate --author=steven.lee1
 	unstage = reset HEAD --
+[color]
+	ui = auto
 [core]
 	excludesfile = /Users/slee2/.gitignore_global
 	editor = vim
