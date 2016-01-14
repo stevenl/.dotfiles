@@ -14,8 +14,12 @@
 [diff]
 	# don't show diffs for renamed files
 	renames = copies
+[merge]
+    conflictstyle = diff3
 [push]
 	default = simple
+[rerere]
+    enabled = true
 [user]
 	name = Steven Lee
 	email = steven.lee1@booking.com
