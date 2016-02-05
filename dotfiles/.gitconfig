@@ -2,9 +2,9 @@
 	co = checkout
 	st = status
 	cm = commit -m
-	hist = log --graph --oneline --decorate
-	myhist = log --graph --oneline --decorate --author=steven.lee1
-	mylog  = log --graph --decorate --author=steven.lee1
+	diffc = diff --cached
+	hist = log --oneline --decorate
+	logd = log --decorate
 	unstage = reset HEAD --
 [color]
 	ui = auto
