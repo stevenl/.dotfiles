@@ -8,6 +8,8 @@
 	unstage = reset HEAD --
 [color]
 	ui = auto
+[commit]
+    template = ~/.gitmessage
 [core]
 	excludesfile = /Users/slee2/.gitignore_global
 	editor = vim
