@@ -1,5 +1,5 @@
 alias cls='clear'
 alias ll='ls -lhA'
-alias main='cd ~/development/main/'
-alias mlib='cd ~/development/main/lib'
-alias aff='cd ~/development/affiliate_data/'
+alias main='cd ~/git_tree/main/'
+alias mlib='cd ~/git_tree/main/lib'
+alias aff='cd ~/git_tree/affiliate_data/'
