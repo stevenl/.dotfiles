@@ -4,6 +4,7 @@
 	cm = commit -m
 	diffc = diff --cached
 	hist = log --oneline --decorate
+	myhist = log --oneline --decorate --author=steven.lee1
 	logd = log --decorate
 	unstage = reset HEAD --
 [color]
