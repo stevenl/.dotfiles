@@ -1,6 +1,6 @@
 [alias]
 	co = checkout
-	st = status
+	st = status -uno
 	cm = commit -m
 	diffc = diff --cached
 	hist = log --oneline --decorate
