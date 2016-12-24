@@ -1,0 +1,48 @@
+# Source aliases
+if [ -f ~/.alias ]; then
+    . ~/.alias
+fi
+
+# prompt: omit user
+zstyle ':prompt:grml:left:setup' items change-root host path vcs percent
+
+# ===========================================================================
+# vcs_info
+
+zstyle ':vcs_info:*' enable git svn
+zstyle ':vcs_info:*' check-for-changes false
+
+if is437; then
+    BLUE="%F{blue}"
+    RED="%F{red}"
+    GREEN="%F{green}"
+    CYAN="%F{cyan}"
+    MAGENTA="%F{magenta}"
+    YELLOW="%F{yellow}"
+    WHITE="%F{white}"
+    NO_COLOR="%f"
+fi
+
+grml_vcs_plain_formats=(
+    format "[%b]%u%c%m "    "zsh: %r"
+    actionformat "[%b|%a]%u%c%m " "zsh: %r"
+    rev-branchformat "%b:%r"
+)
+
+grml_vcs_coloured_formats=(
+    format "${MAGENTA}[${GREEN}%b${MAGENTA}]%u%c%m${NO_COLOR} "
+    actionformat "${MAGENTA}[${GREEN}%b${YELLOW}|${RED}%a${MAGENTA}]%u%c%m${NO_COLOR} "
+    rev-branchformat "%b${RED}:${YELLOW}%r"
+)
+
+if [[ "$TERM" == dumb ]] ; then
+    grml_vcs_info_set_formats plain
+else
+    grml_vcs_info_set_formats coloured
+fi
+
+# make sure our environment is clean regarding colors
+for var in BLUE RED GREEN CYAN YELLOW MAGENTA WHITE ; unset $var
+builtin unset -v var
+
+# ===========================================================================
