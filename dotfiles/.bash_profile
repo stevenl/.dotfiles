@@ -42,6 +42,8 @@ function proxy() {
             export ftp_proxy=$http_proxy
             export rsync_proxy=$http_proxy
             export no_proxy=localhost,127.0.0.1,localaddress,.localdomain.com
+            npm config set proxy $http_proxy
+            npm config set https-proxy $https_proxy
             echo -e "Proxy environment variables ON"
             ;;
         "off")
@@ -49,6 +51,8 @@ function proxy() {
             unset https_proxy
             unset ftp_proxy
             unset rsync_proxy
+            npm config rm proxy
+            npm config rm https-proxy
             echo -e "Proxy environment variables OFF"
             ;;
     esac
