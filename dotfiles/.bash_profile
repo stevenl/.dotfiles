@@ -31,29 +31,31 @@ GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 
-# Enable/disable proxies
-function proxy() {
-    local cmd=${1:-start}
+# Configure and unconfigure proxy variables as requred by apps
+proxy () {
+    PROXYADDR="http://webproxy.corp.booking.com:3128"
+    OPTION="$1"
+    if [ "$OPTION" == "0" ] || [ "$OPTION" == "off" ] || [ "$OPTION" == "no" ]; then
+        unset http_proxy
+        unset https_proxy
+        unset HTTP_PROXY
+        unset HTTPS_PROXY
+        unset no_proxy
 
-    case "$cmd" in
-        "on")
-            export http_proxy=https://webproxy.corp.booking.com:3128/
-            export https_proxy=$http_proxy
-            export ftp_proxy=$http_proxy
-            export rsync_proxy=$http_proxy
-            export no_proxy=localhost,127.0.0.1,localaddress,.localdomain.com
-            npm config set proxy $http_proxy
-            npm config set https-proxy $https_proxy
-            echo -e "Proxy environment variables ON"
-            ;;
-        "off")
-            unset http_proxy
-            unset https_proxy
-            unset ftp_proxy
-            unset rsync_proxy
-            npm config rm proxy
-            npm config rm https-proxy
-            echo -e "Proxy environment variables OFF"
-            ;;
-    esac
+        printf "Proxy off\n"
+    elif [ "$OPTION" == "1" ] || [ "$OPTION" == "on" ] || [ "$OPTION" == "yes" ]; then
+        export http_proxy="$PROXYADDR"
+        export https_proxy="$PROXYADDR"
+        export HTTP_PROXY="$PROXYADDR"
+        export HTTPS_PROXY="$PROXYADDR"
+        export no_proxy="localhost,127.0.0.1"
+
+        printf "Proxy configured to $PROXYADDR\n"
+    else
+        printf "http_proxy=$http_proxy\n"
+        printf "https_proxy=$https_proxy\n"
+        printf "HTTP_PROXY=$HTTP_PROXY\n"
+        printf "HTTPS_PROXY=$HTTPS_PROXY\n"
+        printf "Please use 0/1, on/off, yes,no\n"
+    fi
 }
