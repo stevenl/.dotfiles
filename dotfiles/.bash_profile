@@ -1,3 +1,5 @@
+export PATH="~/bin:$PATH"
+
 # Source aliases
 if [ -f ~/.alias ]; then
     . ~/.alias
