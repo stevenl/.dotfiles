@@ -15,12 +15,6 @@ source ~/perl5/perlbrew/etc/bashrc
 # local::lib should not be used with perlbrew
 # eval $(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)
 
-# Add GHC 7.10.1 to the PATH, via https://ghcformacosx.github.io/
-export GHC_DOT_APP="/Applications/ghc-7.10.1.app"
-if [ -d "$GHC_DOT_APP" ]; then
-    export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
-fi
-
 # Display git repository info in the prompt
 source ~/.dotfiles/bin/git-completion.bash
 source ~/.dotfiles/bin/git-prompt.sh
