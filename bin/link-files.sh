@@ -14,7 +14,7 @@ FORCE=
 [[ " $* " == *" -f "* ]] && { FORCE=yes; vecho "force: moving all files away"; }
 
 # top dir of our dotfiles
-topdir=$(readlink -f ${BASH_SOURCE[0]}); topdir=${topdir%/bin/*}/dotfiles
+topdir=$(greadlink -f ${BASH_SOURCE[0]}); topdir=${topdir%/bin/*}/dotfiles
 vecho "linking files from ${topdir}"
 # better safe than sorry
 [[ -d ${topdir} ]] || exit 1
