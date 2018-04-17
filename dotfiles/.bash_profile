@@ -18,14 +18,14 @@ source ~/perl5/perlbrew/etc/bashrc
 # eval $(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)
 
 # Display git repository info in the prompt
-source ~/.dotfiles/bin/git-completion.bash
-source ~/.dotfiles/bin/git-prompt.sh
+source ~/bin/git-completion.bash
+source ~/bin/git-prompt.sh
 
 PROMPT_COMMAND='__git_ps1 "\u@\h:\w" " \\\$ "'
 GIT_PS1_SHOWCOLORHINTS=1
-GIT_PS1_SHOWDIRTYSTATE=1
+#GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
-GIT_PS1_SHOWUNTRACKEDFILES=1
+#GIT_PS1_SHOWUNTRACKEDFILES=1
 
 # Configure and unconfigure proxy variables as requred by apps
 proxy () {

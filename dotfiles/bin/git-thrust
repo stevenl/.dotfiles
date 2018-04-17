@@ -1,0 +1,10 @@
+# http://www.youtube.com/watch?v=kxopViU98Xo
+git remote prune origin
+git push --tags
+while [ 1 ] ; do
+    git pull --rebase && git push
+    if [[ $? -eq 0 ]] ; then
+        echo "completed thrusting at: " `date`
+        exit 0
+    fi
+done
