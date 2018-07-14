@@ -8,6 +8,8 @@
 	mylog = log --decorate --author=steven.lee1
 	logd = log --decorate
 	unstage = reset HEAD --
+[branch "trunk"]
+	rebase = true
 [color]
 	ui = auto
 [commit]
@@ -19,7 +21,7 @@
 	# don't show diffs for renamed files
 	renames = copies
 [merge]
-    conflictstyle = diff3
+    conflictstyle = merge
 [push]
 	default = simple
 [rerere]
