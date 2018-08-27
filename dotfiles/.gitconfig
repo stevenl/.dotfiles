@@ -8,6 +8,8 @@
 	mylog = log --decorate --author=steven.lee1
 	logd = log --decorate
 	unstage = reset HEAD --
+[branch "master"]
+	rebase = true
 [branch "trunk"]
 	rebase = true
 [color]
