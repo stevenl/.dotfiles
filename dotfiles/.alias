@@ -1,4 +1,5 @@
 alias cls='clear'
+alias g=git
 alias ll='ls -lhA'
 alias main='cd ~/git_tree/main/'
 alias mlib='cd ~/git_tree/main/lib'

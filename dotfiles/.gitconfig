@@ -1,12 +1,14 @@
 [alias]
+	cm = commit
 	co = checkout
-	st = status -uno
-	cm = commit -m
-	diffc = diff --cached
-	hist = log --oneline --decorate
-	myhist = log --oneline --decorate --author=steven.lee1
+	df = diff
+	dfs = diff --staged
+	hs = log --oneline --decorate
+	ld = log --decorate
+	myhs = log --oneline --decorate --author=steven.lee1
 	mylog = log --decorate --author=steven.lee1
-	logd = log --decorate
+	sh = show
+	st = status -uno
 	unstage = reset HEAD --
 [branch "master"]
 	rebase = true
@@ -20,7 +22,7 @@
 	excludesfile = /Users/slee2/.gitignore_global
 	editor = vim
 [diff]
-	# don't show diffs for renamed files
+	# Don't show renamed files as diffs
 	renames = copies
 [merge]
     conflictstyle = merge
