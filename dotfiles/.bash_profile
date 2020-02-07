@@ -30,6 +30,10 @@ GIT_PS1_SHOWCOLORHINTS=1
 GIT_PS1_SHOWSTASHSTATE=1
 #GIT_PS1_SHOWUNTRACKEDFILES=1
 
+# Enable auto-completion for bk tool
+bk completion bash 1>/dev/null
+source ~/Library/Caches/@bookingcom/bk/completion/functions/bash
+
 # Configure and unconfigure proxy variables as requred by apps
 proxy () {
     PROXYADDR="http://webproxy.corp.booking.com:3128"
