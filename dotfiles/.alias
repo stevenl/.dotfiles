@@ -2,7 +2,3 @@ alias cls='clear'
 alias g=git
 alias k=kubectl
 alias ll='ls -lhA'
-alias main='cd ~/git_tree/main/'
-alias mlib='cd ~/git_tree/main/lib'
-alias aff='cd ~/git_tree/affiliate_data/'
-alias sshb='ssh -A ssh.booking.com'

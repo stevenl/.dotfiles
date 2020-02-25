@@ -18,7 +18,7 @@
 [color]
 	ui = auto
 [commit]
-    template = ~/.gitmessage
+	template = ~/.gitmessage
 [core]
 	excludesfile = /Users/slee2/.gitignore_global
 	editor = vim
@@ -26,11 +26,9 @@
 	# Don't show renamed files as diffs
 	renames = copies
 [merge]
-    conflictstyle = merge
+	conflictstyle = merge
 [push]
 	default = simple
-[rerere]
-    enabled = true
 [user]
 	name = Steven Lee
-	email = steven.lee1@booking.com
+	email = stevenwh.lee@gmail.com

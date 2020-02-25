@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-ssh $1 "ssh -O exit git@gitlab.booking.com; dude git-pull && dude restart"
+ssh $1 "dude git-pull && dude restart"
