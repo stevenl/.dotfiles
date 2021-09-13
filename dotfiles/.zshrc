@@ -63,6 +63,10 @@ ZSH_THEME="robbyrussell"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -103,3 +107,7 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source ~/.alias
+
+source <(bk completion zsh)
+
+eval "$(plenv init - zsh)"
