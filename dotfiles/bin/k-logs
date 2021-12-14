@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+if [[ ! "$1" ]]; then
+    echo "Usage: $0 <service>"
+    exit 1
+fi
+
+SERVICE=$1
+
+POD=$(kubectl get pods | grep ^${SERVICE}- | cut -f 1 -d ' ')
+
+echo $POD
+
+kubectl logs -f $POD -c app | egrep -v ready
