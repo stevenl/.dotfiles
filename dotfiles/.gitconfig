@@ -9,6 +9,7 @@
 	myhs = log --oneline --decorate --author=steven.lee1
 	mylog = log --decorate --author=steven.lee1
 	pl = pull
+	pu = push
 	sh = show
 	st = status -uno
 	unstage = reset HEAD --
