@@ -12,6 +12,7 @@
 	pu = push
 	sh = show
 	st = status -uno
+	sw = switch
 	unstage = reset HEAD --
 [branch "master"]
 	rebase = true
