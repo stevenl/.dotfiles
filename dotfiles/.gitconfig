@@ -32,6 +32,7 @@
 	conflictstyle = merge
 [push]
 	default = simple
+	autoSetupRemote = true
 [user]
 	name = Steven Lee
 	email = stevenwh.lee@gmail.com
